@@ -1,0 +1,59 @@
+
+// Jumps to the current file's test case, if it exists (and vice versa)
+void swapWithTest(View view)
+{
+	JEditBuffer buffer = view.getBuffer();
+	
+	// get the class name and file extension
+	String filename = buffer.getName();
+	String suffix = filename.split("\\.")[filename.split("\\.").length-1];
+	String className = filename.replaceAll("\\..*", "");
+	
+	// determine the full path of the file we want to switch to
+	String otherFile;
+	if (className.startsWith("Test"))
+	{
+	   String path = MiscUtilities.getParentOfPath(buffer.getDirectory());
+	   path = MiscUtilities.getParentOfPath(path);
+	   otherFile =
+	      MiscUtilities.constructPath(
+            path, className.replaceFirst("Test", "") + "." + suffix);
+	}
+	else
+	{
+	   String path =
+	      MiscUtilities.constructPath(
+            buffer.getDirectory(), "test", className);
+      otherFile =
+	      MiscUtilities.constructPath(
+	         path, "Test" + className + "." + suffix);
+   }
+   
+   // if the file is already open in another editpane, move focus;
+   // otherwise, open the file in the current edit pane
+   panes = view.getEditPanes();
+   if (panes.length > 1)
+   {
+      for (EditPane p : panes)
+      {
+         buf = p.getBuffer();
+         if (buf.getName().equals(otherFile) || buf.getPath().equals(otherFile))
+         {
+            p.focusOnTextArea();
+            return;
+         }
+      }
+   }
+   
+   Buffer targetBuffer = jEdit.getBuffer(otherFile);
+   if (targetBuffer == null)
+   {
+      jEdit.openFile(view, otherFile);
+   }
+   else
+   {
+      view.goToBuffer(targetBuffer);
+   }
+}
+
+swapWithTest(view);

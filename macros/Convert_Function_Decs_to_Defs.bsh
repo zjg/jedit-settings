@@ -1,0 +1,38 @@
+
+void funcDecsToDefs(View view)
+{
+	JEditBuffer buffer = view.getBuffer();
+	JEditTextArea textArea = view.getTextArea();
+   Selection[] selections = textArea.getSelection();
+   String className = buffer.getName().replaceAll("\\..*", "");
+   
+   for(Selection selection : selections)
+   {
+      int startPos = selection.getStart();
+      int origLength = selection.getEnd() - startPos;
+      
+      String replaceStr = buffer.getText(startPos, origLength)
+                                .replaceAll("public( slots)?:.*\n", "")
+                                .replaceAll("private( slots)?:.*\n", "")
+                                .replaceAll("protected( slots)?:.*\n", "")
+                                .replaceAll("signals:.*\n", "")
+                                .replaceAll(" (~?[\\w\\d_]+\\()",
+                                            " " + className + "::$1")
+                                .replaceAll("\n *", "\n")
+                                .replaceAll("\nvirtual ", "\n")
+                                .replaceAll("\nexplicit ", "\n")
+                                .replaceAll(" = 0;", "\n{\n}\n")
+                                .replaceAll("\\);", ")\n{\n}\n")
+                                .replaceAll("\\) const;", ") const\n{\n}\n")
+                                .replaceAll("\n\n\n", "\n\n")
+                                ;
+      
+      buffer.remove(startPos, origLength);
+      buffer.insert(startPos, replaceStr);
+   }
+   
+   view.getTextArea().selectNone();
+	view.getStatus().setMessageAndClear("Converted function declarations to definitions");
+}
+
+funcDecsToDefs(view);

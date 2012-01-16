@@ -1,0 +1,37 @@
+
+// Converts the selection from CamelCase to UPPER_CASE
+// Example:
+//    selection is "CrosshairStyle", after running this macro
+//    selection will be replaced with "CROSSHAIR_STYLE"
+void camelToUpper(View view)
+{
+	JEditBuffer buffer = view.getBuffer();
+	JEditTextArea textArea = view.getTextArea();
+   Selection[] selections = textArea.getSelection();
+   
+   for(Selection selection : selections)
+   {
+      int startPos = selection.getStart();
+      int origLength = selection.getEnd() - startPos;
+      
+      String replaceStr = buffer.getText(startPos, origLength)
+                                .replaceAll("([A-Z][^A-Z_])", "_$1")
+                                .replaceAll("([A-Z])$", "_$1")
+                                .toUpperCase()
+                                .replaceAll("__", "_");
+      
+      // if the first character is an underscore, remove it
+      if (replaceStr.startsWith("_"))
+      {
+         replaceStr = replaceStr.substring(1);
+      }
+      
+      buffer.remove(startPos, origLength);
+      buffer.insert(startPos, replaceStr);
+   }
+   
+   view.getTextArea().selectNone();
+	view.getStatus().setMessageAndClear("Converted CamelCase to Underscore Upper Case");
+}
+
+camelToUpper(view);

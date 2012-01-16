@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE MODES SYSTEM "catalog.dtd">
+
+<MODES>
+
+<!-- Add lines like the following, one for each edit mode you add: -->
+<!-- <MODE NAME="foo" FILE="foo.xml" FILE_NAME_GLOB="*.foo" /> -->
+
+<MODE NAME="c++"		FILE="cplusplus.xml"
+				FILE_NAME_GLOB="*.{cc,cpp,h,hh,hpp,cxx,dox}" />
+
+<MODE NAME="python"		FILE="python.xml"
+				FILE_NAME_GLOB="*.{py,pyw,sc,jy}"
+				FIRST_LINE_GLOB="#!*/*python*" />
+
+<MODE NAME="shellscript"	FILE="shellscript.xml"
+				FILE_NAME_GLOB="*.{csh,sh,bash,login,profile,bashrc,bash_profile}"
+				FIRST_LINE_GLOB="#!/*sh*" />
+
+<MODE NAME="jam"    FILE="jam.xml"
+            FILE_NAME_GLOB="{Jamfile,Jamrules,Jambase,*.jam}" />
+
+</MODES>

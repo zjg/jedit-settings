@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE MODE SYSTEM "xmode.dtd">
+
+<MODE>
+	<PROPS>
+		<!-- Comment lines -->
+		<PROPERTY NAME="lineComment" VALUE="#" />
+		<!-- Auto indent -->
+		<PROPERTY NAME="indentOpenBrackets" VALUE="{" />
+		<PROPERTY NAME="indentCloseBrackets" VALUE="}" />
+		<PROPERTY NAME="indentNextLine"
+			VALUE="\s*(((if|while)\s*\(|else\s*|else\s+if\s*\(|for\s*\(.*\))[^{;]*)" />
+<!--			VALUE="\s*(((if|while)\s*\(|else\s*|else\s+if\s*\(|for\s*\(.*\))[^{;]*)" /> -->
+		<!-- set this to 'true' if you want to use GNU coding style -->
+		<PROPERTY NAME="doubleBracketIndent" VALUE="false" />
+		<PROPERTY NAME="lineUpClosingBracket" VALUE="true" />
+	</PROPS>
+	<RULES ESCAPE="\" IGNORE_CASE="FALSE" HIGHLIGHT_DIGITS="TRUE">
+		<!-- Comments -->
+		<EOL_SPAN TYPE="COMMENT1">#</EOL_SPAN>
+		
+		<!-- $(...) variables -->
+		<SPAN TYPE="KEYWORD3" NO_LINE_BREAK="TRUE" DELEGATE="VARIABLE">
+			<BEGIN>$(</BEGIN>
+			<END>)</END>
+		</SPAN>
+		
+		<!-- <MARK_FOLLOWING TYPE="KEYWORD2">$</MARK_FOLLOWING> -->
+		
+		<!-- Literals -->
+		<SPAN TYPE="LITERAL1" NO_LINE_BREAK="TRUE">
+			<BEGIN>"</BEGIN>
+			<END>"</END>
+		</SPAN>
+		
+		<!-- Comparison operators (note = is the equality comparison, not ==) -->
+		<SEQ TYPE="OPERATOR">=</SEQ>
+		<SEQ TYPE="OPERATOR">!=</SEQ>
+		
+		<!-- Logical operators -->
+		<SEQ TYPE="OPERATOR">!</SEQ>
+		<SEQ TYPE="OPERATOR">&amp;&amp;</SEQ>
+		<SEQ TYPE="OPERATOR">||</SEQ>
+		
+		<!-- Assignment operators -->
+		<SEQ TYPE="OPERATOR">=</SEQ>
+		<SEQ TYPE="OPERATOR">+=</SEQ>
+		<SEQ TYPE="OPERATOR">?=</SEQ>
+		
+		<!-- Not really operators, but want them to be highlighted -->
+		<SEQ TYPE="OPERATOR">}</SEQ>
+		<SEQ TYPE="OPERATOR">{</SEQ>
+		<SEQ TYPE="OPERATOR">[</SEQ>
+		<SEQ TYPE="OPERATOR">]</SEQ>
+		<SEQ TYPE="OPERATOR">:</SEQ>
+		<SEQ TYPE="OPERATOR">(</SEQ>
+		<SEQ TYPE="OPERATOR">)</SEQ>
+		<SEQ TYPE="OPERATOR">;</SEQ>
+		<!-- <SEQ TYPE="OPERATOR">;</SEQ> -->
+		
+		<SPAN TYPE="KEYWORD4" NO_LINE_BREAK="TRUE">
+		   <BEGIN>&lt;</BEGIN>
+		   <END>&gt;</END>
+		</SPAN>
+		
+		<KEYWORDS>
+			<!-- keywords -->
+			<KEYWORD1>actions</KEYWORD1>
+			<KEYWORD1>bind</KEYWORD1>
+			<KEYWORD1>ignore</KEYWORD1>
+			<KEYWORD1>piecemeal</KEYWORD1>
+			<KEYWORD1>quietly</KEYWORD1>
+			<KEYWORD1>together</KEYWORD1>
+			<KEYWORD1>updated</KEYWORD1>
+			<KEYWORD1>break</KEYWORD1>
+			<KEYWORD1>continue</KEYWORD1>
+			<KEYWORD1>for</KEYWORD1>
+			<KEYWORD1>in</KEYWORD1>
+			<KEYWORD1>if</KEYWORD1>
+			<KEYWORD1>else</KEYWORD1>
+			<KEYWORD1>local</KEYWORD1>
+			<KEYWORD1>on</KEYWORD1>
+			<KEYWORD1>return</KEYWORD1>
+			<KEYWORD1>rule</KEYWORD1>
+			<KEYWORD1>switch</KEYWORD1>
+			<KEYWORD1>case</KEYWORD1>
+			<KEYWORD1>while</KEYWORD1>
+			
+			<!-- Dependency-related built-in rules -->
+			<KEYWORD2>DEPENDS</KEYWORD2>
+			<KEYWORD2>Depends</KEYWORD2>
+			<KEYWORD2>INCLUDES</KEYWORD2>
+			<KEYWORD2>Includes</KEYWORD2>
+			
+			<!-- Binding-related built-in rules -->
+			<KEYWORD2>ALWAYS</KEYWORD2>
+			<KEYWORD2>Always</KEYWORD2>
+			<KEYWORD2>LEAVES</KEYWORD2>
+			<KEYWORD2>Leaves</KEYWORD2>
+			<KEYWORD2>NOCARE</KEYWORD2>
+			<KEYWORD2>NoCare</KEYWORD2>
+			<KEYWORD2>NOTFILE</KEYWORD2>
+			<KEYWORD2>NotFile</KEYWORD2>
+			<KEYWORD2>NOUPDATE</KEYWORD2>
+			<KEYWORD2>NoUpdate</KEYWORD2>
+			<KEYWORD2>TEMPORARY</KEYWORD2>
+			<KEYWORD2>Temporary</KEYWORD2>
+			
+			<!-- Utility-related built-in rules -->
+			<KEYWORD2>ECHO</KEYWORD2>
+			<KEYWORD2>Echo</KEYWORD2>
+			<KEYWORD2>echo</KEYWORD2>
+			<KEYWORD2>EXIT</KEYWORD2>
+			<KEYWORD2>Exit</KEYWORD2>
+			<KEYWORD2>exit</KEYWORD2>
+			<KEYWORD2>GLOB</KEYWORD2>
+			<KEYWORD2>GLOB-RECURSIVELY</KEYWORD2>
+			<KEYWORD2>Glob</KEYWORD2>
+			<KEYWORD2>glob</KEYWORD2>
+			<KEYWORD2>MATCH</KEYWORD2>
+			<KEYWORD2>Match</KEYWORD2>
+			<KEYWORD2>match</KEYWORD2>
+			
+			<!-- Built-in variables -->
+			<KEYWORD2>SEARCH</KEYWORD2>
+			<KEYWORD2>LOCATE</KEYWORD2>
+			<KEYWORD2>HDRSCAN</KEYWORD2>
+			<KEYWORD2>HDRRULE</KEYWORD2>
+			<KEYWORD2>OS</KEYWORD2>
+			<KEYWORD2>OSPLAT</KEYWORD2>
+			<KEYWORD2>MAC</KEYWORD2>
+			<KEYWORD2>NT</KEYWORD2>
+			<KEYWORD2>OS2</KEYWORD2>
+			<KEYWORD2>UNIX</KEYWORD2>
+			<KEYWORD2>VMS</KEYWORD2>
+			<KEYWORD2>JAMDATE</KEYWORD2>
+			<KEYWORD2>JAMUNAME</KEYWORD2>
+			<KEYWORD2>JAMVERSION</KEYWORD2>
+			<KEYWORD2>JAMSHELL</KEYWORD2>
+			
+			<!-- added by Doug (might not all be actual keywords,
+			     but I want them highlighted) -->
+			<KEYWORD1>build-project</KEYWORD1>
+			<KEYWORD1>class</KEYWORD1>
+			<KEYWORD1>import</KEYWORD1>
+			<KEYWORD1>use-project</KEYWORD1>
+			<KEYWORD1>lib</KEYWORD1>
+			<KEYWORD1>exe</KEYWORD1>
+			<KEYWORD1>install</KEYWORD1>
+			<!--  covered by the <SPAN> above
+			<KEYWORD1>link</KEYWORD1>
+			<KEYWORD1>toolset</KEYWORD1>
+			<KEYWORD1>include</KEYWORD1>
+			<KEYWORD1>direct-include</KEYWORD1>
+			<KEYWORD1>direct-dependency</KEYWORD1>
+			<KEYWORD1>implicit-dependency</KEYWORD1>
+			<KEYWORD1>dependency</KEYWORD1>
+			<KEYWORD1>library</KEYWORD1>
+			-->
+			
+		</KEYWORDS>
+	</RULES>
+	<RULES SET="VARIABLE" DEFAULT="KEYWORD2" ESCAPE="\">
+		<SPAN TYPE="KEYWORD2" NO_LINE_BREAK="TRUE" DELEGATE="VARIABLE">
+			<BEGIN>(</BEGIN>
+			<END>)</END>
+		</SPAN>
+	
+		<!-- TODO: Jambase has this line:
+				_h = $(<:BS=.h) ;
+			perhaps the below :X options should be regex-based
+			to allow arbitrary combinations?
+		
+			something like:
+				<SEQ_REGEX TYPE="OPERATOR">\:[GDBSMREJ]=?</SEQ_REGEX>
+			
+			strangely, the SEQ_REGEX doesn't work, but the plain SEQ does
+				<SEQ_REGEX TYPE="OPERATOR" HASH_CHAR="B">BS</SEQ_REGEX>
+				<SEQ       TYPE="OPERATOR"              >BS</SEQ>
+		-->
+		<SEQ TYPE="OPERATOR">:BS=</SEQ>	<!-- not documented, but in Jambase (combo of B and S ?) -->
+		<SEQ TYPE="OPERATOR">:G=</SEQ>
+		<SEQ TYPE="OPERATOR">:D=</SEQ>
+		<SEQ TYPE="OPERATOR">:B=</SEQ>
+		<SEQ TYPE="OPERATOR">:S=</SEQ>
+		<SEQ TYPE="OPERATOR">:M=</SEQ>
+		<SEQ TYPE="OPERATOR">:R=</SEQ>
+		<SEQ TYPE="OPERATOR">:E=</SEQ>
+		<SEQ TYPE="OPERATOR">:J=</SEQ>
+		<SEQ TYPE="OPERATOR">:E</SEQ>	<!-- not documented, but in Jambase -->
+		<SEQ TYPE="OPERATOR">:BS</SEQ>	<!-- not documented, but in Jambase (combo of B and S ?) -->
+		<SEQ TYPE="OPERATOR">:B</SEQ>
+		<SEQ TYPE="OPERATOR">:S</SEQ>
+		<SEQ TYPE="OPERATOR">:M</SEQ>
+		<SEQ TYPE="OPERATOR">:D</SEQ>
+		<SEQ TYPE="OPERATOR">:P</SEQ>
+		<SEQ TYPE="OPERATOR">:G</SEQ>
+		<SEQ TYPE="OPERATOR">:U</SEQ>
+		<SEQ TYPE="OPERATOR">:L</SEQ>
+	</RULES>
+</MODE>

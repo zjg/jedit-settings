@@ -1,0 +1,13 @@
+
+// Pastes the buffer's filename at the current cursor location
+void pasteBufferFilename(View view)
+{
+	JEditBuffer buffer = view.getBuffer();
+	JEditTextArea textArea = view.getTextArea();
+	
+	String filename = buffer.getName();
+	String scrubbed = filename.replaceAll("\\..*", "");
+   buffer.insert(textArea.getCaretPosition(), scrubbed);
+}
+
+pasteBufferFilename(view);

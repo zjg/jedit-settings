@@ -1,0 +1,29 @@
+
+# main folder
+abbrevs
+activity.log
+cache
+history
+jars-cache
+jars
+killring.xml
+mirrorList.xml
+perspective.xml
+registers.xml
+recent.xml
+pluginMgr-Cached.xml.gz
+settings-backup
+*~
+server
+qn.txt
+
+# plugins
+CtagsInterface
+DockableWindowManager
+PluginManager.download
+SuperAbbrevs
+macros/.macroManagerCache
+plugins/projectviewer*
+plugins/marker*
+plugins/ise*
+plugins/gatchan*
