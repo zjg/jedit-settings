@@ -54,37 +54,37 @@
         <IMPORT DELEGATE="c::CORE"/>
 
         <KEYWORDS>
-            <KEYWORD3>catch</KEYWORD3>
-            <KEYWORD3>class</KEYWORD3>
-            <KEYWORD3>const_cast</KEYWORD3>
             <KEYWORD1>delete</KEYWORD1>
-            <KEYWORD3>dynamic_cast</KEYWORD3>
             <KEYWORD1>explicit</KEYWORD1>
-            <KEYWORD2>export</KEYWORD2>
             <KEYWORD1>friend</KEYWORD1>
-            <KEYWORD3>mutable</KEYWORD3>
-            <KEYWORD2>namespace</KEYWORD2>
             <KEYWORD1>new</KEYWORD1>
-            <KEYWORD3>operator</KEYWORD3>
             <KEYWORD1>private</KEYWORD1>
             <KEYWORD1>protected</KEYWORD1>
             <KEYWORD1>public</KEYWORD1>
-            <KEYWORD1>signals</KEYWORD1>
-            <KEYWORD1>slots</KEYWORD1>
+            <KEYWORD1>throw</KEYWORD1>
+            <KEYWORD1>try</KEYWORD1>
+            <KEYWORD1>virtual</KEYWORD1>
+            <KEYWORD2>export</KEYWORD2>
+            <KEYWORD2>namespace</KEYWORD2>
+            <KEYWORD2>using</KEYWORD2>
+            <KEYWORD3>catch</KEYWORD3>
+            <KEYWORD3>class</KEYWORD3>
+            <KEYWORD3>const_cast</KEYWORD3>
+            <KEYWORD3>dynamic_cast</KEYWORD3>
+            <KEYWORD3>mutable</KEYWORD3>
+            <KEYWORD3>operator</KEYWORD3>
             <KEYWORD3>reinterpret_cast</KEYWORD3>
             <KEYWORD3>static_assert</KEYWORD3>
             <KEYWORD3>static_cast</KEYWORD3>
             <KEYWORD3>template</KEYWORD3>
-            <LITERAL2>this</LITERAL2>
-            <KEYWORD1>throw</KEYWORD1>
-            <KEYWORD1>try</KEYWORD1>
             <KEYWORD3>typeid</KEYWORD3>
             <KEYWORD3>typename</KEYWORD3>
-            <KEYWORD2>using</KEYWORD2>
-            <KEYWORD1>virtual</KEYWORD1>
+            <LITERAL2>this</LITERAL2>
             
             <!-- Qt stuff -->
             <KEYWORD1>foreach</KEYWORD1>
+            <KEYWORD1>signals</KEYWORD1>
+            <KEYWORD1>slots</KEYWORD1>
             
             <KEYWORD3>qint8</KEYWORD3>
             <KEYWORD3>qint16</KEYWORD3>
@@ -122,10 +122,10 @@
 
         <!-- Directives -->
         <KEYWORDS>
-            <MARKUP>ifdef</MARKUP>
-            <MARKUP>ifndef</MARKUP>
             <MARKUP>else</MARKUP>
             <MARKUP>error</MARKUP>
+            <MARKUP>ifdef</MARKUP>
+            <MARKUP>ifndef</MARKUP>
             <MARKUP>line</MARKUP>
             <MARKUP>pragma</MARKUP>
             <MARKUP>undef</MARKUP>

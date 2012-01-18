@@ -20,4 +20,7 @@
 <MODE NAME="jam"    FILE="jam.xml"
             FILE_NAME_GLOB="{Jamfile,Jamrules,Jambase,*.jam}" />
 
+<MODE NAME="tup"    FILE="tup.xml"
+            FILE_NAME_GLOB="{Tupfile,*.tup}" />
+
 </MODES>

@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<!DOCTYPE MODE SYSTEM "xmode.dtd">
+
+<MODE>
+   <PROPS>
+      
+      <PROPERTY NAME="lineComment" VALUE="#" />
+      
+   </PROPS>
+   
+   <RULES IGNORE_CASE="FALSE" HIGHLIGHT_DIGITS="FALSE">
+      
+		<EOL_SPAN TYPE="COMMENT1">#</EOL_SPAN>
+		
+		<SEQ TYPE="KEYWORD1" AT_LINE_START="TRUE">.gitignore</SEQ>
+		
+		<!-- !macros -->
+		<SPAN HASH_CHAR="!" TYPE="FUNCTION">
+		   <BEGIN>!</BEGIN>
+		   <END>=</END>
+      </SPAN>
+      
+      <!-- $(TUP_*) variables -->
+		<SPAN TYPE="KEYWORD4" NO_LINE_BREAK="TRUE">
+			<BEGIN>$(TUP_</BEGIN>
+			<END>)</END>
+		</SPAN>
+		
+      <!-- @(TUP_*) variables -->
+		<SPAN TYPE="KEYWORD4" NO_LINE_BREAK="TRUE">
+			<BEGIN>@(TUP_</BEGIN>
+			<END>)</END>
+		</SPAN>
+		
+      
+      <!-- $(..) variables -->
+		<SPAN TYPE="KEYWORD2" NO_LINE_BREAK="TRUE">
+			<BEGIN>$(</BEGIN>
+			<END>)</END>
+		</SPAN>
+		
+      <!-- @(..) variables -->
+		<SPAN TYPE="KEYWORD2" NO_LINE_BREAK="TRUE">
+			<BEGIN>@(</BEGIN>
+			<END>)</END>
+		</SPAN>
+		
+		<!-- {bins} -->
+		<SPAN TYPE="LITERAL3" NO_WORD_BREAK="TRUE">
+		   <BEGIN>{</BEGIN>
+		   <END>}</END>
+		</SPAN>
+		
+		<!-- operators -->
+		<SEQ TYPE="OPERATOR" AT_WORD_START="TRUE">=</SEQ>
+		<SEQ TYPE="OPERATOR">:=</SEQ>
+		<SEQ TYPE="OPERATOR">+=</SEQ>
+		<SEQ TYPE="OPERATOR">(</SEQ>
+		<SEQ TYPE="OPERATOR">)</SEQ>
+		<SEQ TYPE="OPERATOR">{</SEQ>
+		<SEQ TYPE="OPERATOR">}</SEQ>
+		<SEQ TYPE="OPERATOR">:</SEQ>
+		<SEQ TYPE="OPERATOR">|></SEQ>
+		<SEQ TYPE="OPERATOR">|</SEQ>
+		<SEQ TYPE="OPERATOR">!</SEQ>
+		<SEQ TYPE="OPERATOR">,</SEQ>
+		
+		<!-- %-flags -->
+		<MARK_FOLLOWING TYPE="KEYWORD3">%</MARK_FOLLOWING>
+		
+		<!-- ^ command output string ^ -->
+		<SPAN TYPE="LITERAL4" NO_LINE_BREAK="TRUE">
+		   <BEGIN>^</BEGIN>
+		   <END>^</END>
+      </SPAN>
+		
+		<!-- includes -->
+      <SEQ TYPE="KEYWORD1" AT_LINE_START="TRUE">include_rules</SEQ>
+      <SEQ TYPE="KEYWORD1" AT_LINE_START="TRUE">include</SEQ>
+      
+      <!-- keywords -->
+      <KEYWORDS>
+         <KEYWORD1>if</KEYWORD1>
+         <KEYWORD1>ifeq</KEYWORD1>
+         <KEYWORD1>ifneq</KEYWORD1>
+         <KEYWORD1>ifdef</KEYWORD1>
+         <KEYWORD1>ifndef</KEYWORD1>
+         <KEYWORD1>else</KEYWORD1>
+         <KEYWORD1>endif</KEYWORD1>
+         <KEYWORD1>run</KEYWORD1>
+      </KEYWORDS>
+      
+   </RULES>
+   
+</MODE>
