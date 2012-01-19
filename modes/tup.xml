@@ -15,10 +15,11 @@
 		<SEQ TYPE="KEYWORD1" AT_LINE_START="TRUE">.gitignore</SEQ>
 		
 		<!-- !macros -->
-		<SPAN HASH_CHAR="!" TYPE="FUNCTION">
+		<SPAN HASH_CHAR="!" TYPE="FUNCTION" AT_LINE_START="TRUE">
 		   <BEGIN>!</BEGIN>
 		   <END>=</END>
       </SPAN>
+      <MARK_FOLLOWING TYPE="FUNCTION">!</MARK_FOLLOWING>
       
       <!-- $(TUP_*) variables -->
 		<SPAN TYPE="KEYWORD4" NO_LINE_BREAK="TRUE">
@@ -75,8 +76,8 @@
       </SPAN>
 		
 		<!-- includes -->
-      <SEQ TYPE="KEYWORD1" AT_LINE_START="TRUE">include_rules</SEQ>
-      <SEQ TYPE="KEYWORD1" AT_LINE_START="TRUE">include</SEQ>
+      <SEQ TYPE="KEYWORD1" AT_WHITESPACE_END="TRUE">include_rules</SEQ>
+      <SEQ TYPE="KEYWORD1" AT_WHITESPACE_END="TRUE">include</SEQ>
       
       <!-- keywords -->
       <KEYWORDS>
@@ -88,6 +89,7 @@
          <KEYWORD1>else</KEYWORD1>
          <KEYWORD1>endif</KEYWORD1>
          <KEYWORD1>run</KEYWORD1>
+         <KEYWORD1>foreach</KEYWORD1>
       </KEYWORDS>
       
    </RULES>
