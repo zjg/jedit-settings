@@ -6,6 +6,11 @@
 <!-- Add lines like the following, one for each edit mode you add: -->
 <!-- <MODE NAME="foo" FILE="foo.xml" FILE_NAME_GLOB="*.foo" /> -->
 
+
+<!-- We let c++ color the .h files -->
+<MODE NAME="c"			FILE="c.xml"
+				FILE_NAME_GLOB="*.c" />
+
 <MODE NAME="c++"		FILE="cplusplus.xml"
 				FILE_NAME_GLOB="*.{cc,cpp,h,hh,hpp,cxx,dox}" />
 

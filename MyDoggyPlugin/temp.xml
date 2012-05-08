@@ -1,0 +1,265 @@
+<?xml version="1.0" standalone="yes"?>
+
+<mydoggy version="1.5.0" contentManagerEnabled="true">
+    <toolWindows>
+        <sharedWindows></sharedWindows>
+        <toolWindow id="bufferlist" available="true" visible="true" active="false" autoHide="false" anchor="LEFT" anchorIndex="2" type="DOCKED" aggregateMode="false" maximized="false" index="1" flashing="false" lockedOnAnchor="false" hideOnZeroTabs="true">
+            <descriptors>
+                <docked animating="false" autoHide="false" enabled="true" hideRepresentativeButtonOnVisible="false" idVisibleOnTitleBar="false" titleBarButtonsVisible="true" titleBarVisible="true" dockLength="200" minimumDockLength="100" popupMenuEnabled="true"/>
+                <sliding animating="true" autoHide="true" enabled="true" hideRepresentativeButtonOnVisible="false" idVisibleOnTitleBar="true" titleBarButtonsVisible="true" titleBarVisible="true" transparentMode="true" transparentDelay="1000" transparentRatio="0.5"/>
+                <floating animating="true" autoHide="false" enabled="true" hideRepresentativeButtonOnVisible="false" idVisibleOnTitleBar="true" titleBarButtonsVisible="true" titleBarVisible="true" modal="false" transparentMode="true" transparentDelay="1500" transparentRatio="0.7" addToTaskBar="true" alwaysOnTop="false" osDecorated="false" resizable="true"/>
+                <floatingLive animating="true" autoHide="false" enabled="true" hideRepresentativeButtonOnVisible="false" idVisibleOnTitleBar="true" titleBarButtonsVisible="true" titleBarVisible="true" transparentMode="true" transparentDelay="1000" transparentRatio="0.5" resizable="true"/>
+                <anchor visible="true" title="Buffer List" previewEnabled="false" previewDelay="1000" previewTransparentRatio="0.65">
+                    <lockingAnchors></lockingAnchors>
+                </anchor>
+            </descriptors>
+        </toolWindow>
+        <toolWindow id="vfs.browser" available="true" visible="false" active="false" autoHide="false" anchor="RIGHT" anchorIndex="1" type="DOCKED" aggregateMode="false" maximized="false" index="2" flashing="false" lockedOnAnchor="false" hideOnZeroTabs="true">
+            <descriptors>
+                <docked animating="false" autoHide="false" enabled="true" hideRepresentativeButtonOnVisible="false" idVisibleOnTitleBar="false" titleBarButtonsVisible="true" titleBarVisible="true" dockLength="230" minimumDockLength="37" popupMenuEnabled="true"/>
+                <sliding animating="true" autoHide="true" enabled="true" hideRepresentativeButtonOnVisible="false" idVisibleOnTitleBar="true" titleBarButtonsVisible="true" titleBarVisible="true" transparentMode="true" transparentDelay="1000" transparentRatio="0.5"/>
+                <floating animating="true" autoHide="false" enabled="true" hideRepresentativeButtonOnVisible="false" idVisibleOnTitleBar="true" titleBarButtonsVisible="true" titleBarVisible="true" modal="false" transparentMode="true" transparentDelay="1500" transparentRatio="0.7" addToTaskBar="true" alwaysOnTop="false" osDecorated="false" resizable="true"/>
+                <floatingLive animating="true" autoHide="false" enabled="true" hideRepresentativeButtonOnVisible="false" idVisibleOnTitleBar="true" titleBarButtonsVisible="true" titleBarVisible="true" modal="false" transparentMode="true" transparentDelay="1500" transparentRatio="0.7" addToTaskBar="true" alwaysOnTop="false" osDecorated="false" resizable="true">
+                    <location x="1680" y="50"/>
+                    <size width="190" height="761"/>
+                </floatingLive>
+                <anchor visible="true" title="File Browser" previewEnabled="false" previewDelay="1000" previewTransparentRatio="0.65">
+                    <lockingAnchors></lockingAnchors>
+                </anchor>
+            </descriptors>
+        </toolWindow>
+        <toolWindow id="class-browser-class-hierarchy" available="true" visible="true" active="false" autoHide="false" anchor="LEFT" anchorIndex="1" type="DOCKED" aggregateMode="false" maximized="false" index="3" flashing="false" lockedOnAnchor="false" hideOnZeroTabs="true">
+            <descriptors>
+                <docked animating="false" autoHide="false" enabled="true" hideRepresentativeButtonOnVisible="false" idVisibleOnTitleBar="false" titleBarButtonsVisible="true" titleBarVisible="true" dockLength="200" minimumDockLength="100" popupMenuEnabled="true"/>
+                <sliding animating="true" autoHide="true" enabled="true" hideRepresentativeButtonOnVisible="false" idVisibleOnTitleBar="true" titleBarButtonsVisible="true" titleBarVisible="true" transparentMode="true" transparentDelay="1000" transparentRatio="0.5"/>
+                <floating animating="true" autoHide="false" enabled="true" hideRepresentativeButtonOnVisible="false" idVisibleOnTitleBar="true" titleBarButtonsVisible="true" titleBarVisible="true" modal="false" transparentMode="true" transparentDelay="1500" transparentRatio="0.7" addToTaskBar="true" alwaysOnTop="false" osDecorated="false" resizable="true"/>
+                <floatingLive animating="true" autoHide="false" enabled="true" hideRepresentativeButtonOnVisible="false" idVisibleOnTitleBar="true" titleBarButtonsVisible="true" titleBarVisible="true" transparentMode="true" transparentDelay="1000" transparentRatio="0.5" resizable="true"/>
+                <anchor visible="true" title="ClassBrowser" previewEnabled="false" previewDelay="1000" previewTransparentRatio="0.65">
+                    <lockingAnchors></lockingAnchors>
+                </anchor>
+            </descriptors>
+        </toolWindow>
+        <toolWindow id="ctags-interface-tag-list" available="true" visible="true" active="false" autoHide="false" anchor="LEFT" anchorIndex="3" type="DOCKED" aggregateMode="false" maximized="false" index="4" flashing="false" lockedOnAnchor="false" hideOnZeroTabs="true">
+            <descriptors>
+                <docked animating="false" autoHide="false" enabled="true" hideRepresentativeButtonOnVisible="false" idVisibleOnTitleBar="false" titleBarButtonsVisible="true" titleBarVisible="true" dockLength="200" minimumDockLength="100" popupMenuEnabled="true"/>
+                <sliding animating="true" autoHide="true" enabled="true" hideRepresentativeButtonOnVisible="false" idVisibleOnTitleBar="true" titleBarButtonsVisible="true" titleBarVisible="true" transparentMode="true" transparentDelay="1000" transparentRatio="0.5"/>
+                <floating animating="true" autoHide="false" enabled="true" hideRepresentativeButtonOnVisible="false" idVisibleOnTitleBar="true" titleBarButtonsVisible="true" titleBarVisible="true" modal="false" transparentMode="true" transparentDelay="1500" transparentRatio="0.7" addToTaskBar="true" alwaysOnTop="false" osDecorated="false" resizable="true"/>
+                <floatingLive animating="true" autoHide="false" enabled="true" hideRepresentativeButtonOnVisible="false" idVisibleOnTitleBar="true" titleBarButtonsVisible="true" titleBarVisible="true" transparentMode="true" transparentDelay="1000" transparentRatio="0.5" resizable="true"/>
+                <anchor visible="true" title="Tag List" previewEnabled="false" previewDelay="1000" previewTransparentRatio="0.65">
+                    <lockingAnchors></lockingAnchors>
+                </anchor>
+            </descriptors>
+        </toolWindow>
+    </toolWindows>
+    <toolWindowManagerDescriptor numberingEnabled="true" previewEnabled="true" showUnavailableTools="false">
+        <pushAway pushAwayMode="HORIZONTAL">
+            <mode type="MOST_RECENT">
+                <anchor type="TOP"/>
+                <anchor type="RIGHT"/>
+                <anchor type="LEFT"/>
+                <anchor type="BOTTOM"/>
+            </mode>
+        </pushAway>
+    </toolWindowManagerDescriptor>
+    <contentManagerUI>
+        <TabbedContentManagerUI closeable="true" detachable="true" minimizable="true" maximizable="true" popupMenuEnabled="true" showAlwaysTab="false" tabLayout="SCROLL" tabPlacement="TOP"/>
+    </contentManagerUI>
+    <contentManager>
+        <sharedWindows></sharedWindows>
+        <contents>
+            <content id="main" detached="false" enabled="true" selected="false" maximized="false" minimized="false" flashing="false" closeable="true" detachable="true" minimizable="true" maximizable="true" transparentMode="true" transparentDelay="0" transparentRatio="0.7" addToTaskBarWhenDetached="false" alwaysOnTop="true"></content>
+        </contents>
+    </contentManager>
+    <toolWindowBars>
+        <toolWindowBar anchor="LEFT" dividerSize="3" aggregateMode="false" length="23" visible="true" toolsVisible="true">
+            <layout>
+                <![CDATA[
+<java version="1.6.0_31" class="java.beans.XMLDecoder"> 
+ <object id="MultiSplitLayout$Split0" class="org.noos.xing.mydoggy.plaf.ui.cmp.multisplit.MultiSplitLayout$Split"> 
+  <void property="bounds"> 
+   <object class="java.awt.Rectangle"> 
+    <int>0</int> 
+    <int>0</int> 
+    <int>200</int> 
+    <int>1142</int> 
+   </object> 
+  </void> 
+  <void id="ArrayList0" property="children"> 
+   <void method="add"> 
+    <object class="org.noos.xing.mydoggy.plaf.ui.cmp.multisplit.DockableLeaf"> 
+     <void property="bounds"> 
+      <object class="java.awt.Rectangle"> 
+       <int>0</int> 
+       <int>0</int> 
+       <int>200</int> 
+       <int>794</int> 
+      </object> 
+     </void> 
+     <void property="dockables"> 
+      <object class="java.util.ArrayList"> 
+       <void method="add"> 
+        <string>bufferlist</string> 
+       </void> 
+      </object> 
+     </void> 
+     <void property="name"> 
+      <string>2</string> 
+     </void> 
+     <void property="parent"> 
+      <object idref="MultiSplitLayout$Split0"/> 
+     </void> 
+     <void property="weight"> 
+      <double>0.3333333333333333</double> 
+     </void> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object class="org.noos.xing.mydoggy.plaf.ui.cmp.multisplit.MultiSplitLayout$Divider"> 
+     <void property="bounds"> 
+      <object class="java.awt.Rectangle"> 
+       <int>0</int> 
+       <int>794</int> 
+       <int>200</int> 
+       <int>5</int> 
+      </object> 
+     </void> 
+     <void property="parent"> 
+      <object idref="MultiSplitLayout$Split0"/> 
+     </void> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object class="org.noos.xing.mydoggy.plaf.ui.cmp.multisplit.DockableLeaf"> 
+     <void property="bounds"> 
+      <object class="java.awt.Rectangle"> 
+       <int>0</int> 
+       <int>799</int> 
+       <int>200</int> 
+       <int>152</int> 
+      </object> 
+     </void> 
+     <void property="dockables"> 
+      <object class="java.util.ArrayList"> 
+       <void method="add"> 
+        <string>class-browser-class-hierarchy</string> 
+       </void> 
+      </object> 
+     </void> 
+     <void property="name"> 
+      <string>3</string> 
+     </void> 
+     <void property="parent"> 
+      <object idref="MultiSplitLayout$Split0"/> 
+     </void> 
+     <void property="weight"> 
+      <double>0.3333333333333333</double> 
+     </void> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object class="org.noos.xing.mydoggy.plaf.ui.cmp.multisplit.MultiSplitLayout$Divider"> 
+     <void property="bounds"> 
+      <object class="java.awt.Rectangle"> 
+       <int>0</int> 
+       <int>951</int> 
+       <int>200</int> 
+       <int>5</int> 
+      </object> 
+     </void> 
+     <void property="parent"> 
+      <object idref="MultiSplitLayout$Split0"/> 
+     </void> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object class="org.noos.xing.mydoggy.plaf.ui.cmp.multisplit.DockableLeaf"> 
+     <void property="bounds"> 
+      <object class="java.awt.Rectangle"> 
+       <int>0</int> 
+       <int>956</int> 
+       <int>200</int> 
+       <int>186</int> 
+      </object> 
+     </void> 
+     <void property="dockables"> 
+      <object class="java.util.ArrayList"> 
+       <void method="add"> 
+        <string>ctags-interface-tag-list</string> 
+       </void> 
+      </object> 
+     </void> 
+     <void property="name"> 
+      <string>1</string> 
+     </void> 
+     <void property="parent"> 
+      <object idref="MultiSplitLayout$Split0"/> 
+     </void> 
+     <void property="weight"> 
+      <double>0.3333333333333333</double> 
+     </void> 
+    </object> 
+   </void> 
+  </void> 
+  <void property="children"> 
+   <object idref="ArrayList0"/> 
+  </void> 
+  <void property="rowLayout"> 
+   <boolean>false</boolean> 
+  </void> 
+ </object> 
+</java> 
+]]>
+            </layout>
+            <workspace>
+                <![CDATA[PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJ5ZXMiPz4KCjxteWRvZ2d5IHZlcnNpb249
+IjEuNS4wIiBjb250ZW50TWFuYWdlckVuYWJsZWQ9InRydWUiPgogICAgPHRvb2xXaW5kb3dzPgog
+ICAgICAgIDxzaGFyZWRXaW5kb3dzPjwvc2hhcmVkV2luZG93cz4KICAgIDwvdG9vbFdpbmRvd3M+
+CiAgICA8dG9vbFdpbmRvd0JhcnM+CiAgICAgICAgPHRvb2xXaW5kb3dCYXIgYW5jaG9yPSJMRUZU
+IiBkaXZpZGVyU2l6ZT0iMyIgYWdncmVnYXRlTW9kZT0iZmFsc2UiIGxlbmd0aD0iMjMiIHZpc2li
+bGU9InRydWUiIHRvb2xzVmlzaWJsZT0idHJ1ZSI+PC90b29sV2luZG93QmFyPgogICAgPC90b29s
+V2luZG93QmFycz4KPC9teWRvZ2d5PgoK]]>
+            </workspace>
+        </toolWindowBar>
+        <toolWindowBar anchor="BOTTOM" dividerSize="3" aggregateMode="false" length="23" visible="true" toolsVisible="true">
+            <workspace>
+                <![CDATA[PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJ5ZXMiPz4KCjxteWRvZ2d5IHZlcnNpb249
+IjEuNS4wIiBjb250ZW50TWFuYWdlckVuYWJsZWQ9InRydWUiPgogICAgPHRvb2xXaW5kb3dzPgog
+ICAgICAgIDxzaGFyZWRXaW5kb3dzPjwvc2hhcmVkV2luZG93cz4KICAgIDwvdG9vbFdpbmRvd3M+
+CiAgICA8dG9vbFdpbmRvd0JhcnM+CiAgICAgICAgPHRvb2xXaW5kb3dCYXIgYW5jaG9yPSJCT1RU
+T00iIGRpdmlkZXJTaXplPSIzIiBhZ2dyZWdhdGVNb2RlPSJmYWxzZSIgbGVuZ3RoPSIyMyIgdmlz
+aWJsZT0idHJ1ZSIgdG9vbHNWaXNpYmxlPSJ0cnVlIj48L3Rvb2xXaW5kb3dCYXI+CiAgICA8L3Rv
+b2xXaW5kb3dCYXJzPgo8L215ZG9nZ3k+Cgo=]]>
+            </workspace>
+        </toolWindowBar>
+        <toolWindowBar anchor="RIGHT" dividerSize="3" aggregateMode="false" length="23" visible="true" toolsVisible="true">
+            <layout>
+                <![CDATA[
+<java version="1.6.0_31" class="java.beans.XMLDecoder"> 
+ <null/> 
+</java> 
+]]>
+            </layout>
+            <workspace>
+                <![CDATA[PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJ5ZXMiPz4KCjxteWRvZ2d5IHZlcnNpb249
+IjEuNS4wIiBjb250ZW50TWFuYWdlckVuYWJsZWQ9InRydWUiPgogICAgPHRvb2xXaW5kb3dzPgog
+ICAgICAgIDxzaGFyZWRXaW5kb3dzPjwvc2hhcmVkV2luZG93cz4KICAgIDwvdG9vbFdpbmRvd3M+
+CiAgICA8dG9vbFdpbmRvd0JhcnM+CiAgICAgICAgPHRvb2xXaW5kb3dCYXIgYW5jaG9yPSJSSUdI
+VCIgZGl2aWRlclNpemU9IjMiIGFnZ3JlZ2F0ZU1vZGU9ImZhbHNlIiBsZW5ndGg9IjIzIiB2aXNp
+YmxlPSJ0cnVlIiB0b29sc1Zpc2libGU9InRydWUiPjwvdG9vbFdpbmRvd0Jhcj4KICAgIDwvdG9v
+bFdpbmRvd0JhcnM+CjwvbXlkb2dneT4KCg==]]>
+            </workspace>
+        </toolWindowBar>
+        <toolWindowBar anchor="TOP" dividerSize="3" aggregateMode="false" length="23" visible="true" toolsVisible="false">
+            <workspace>
+                <![CDATA[PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJ5ZXMiPz4KCjxteWRvZ2d5IHZlcnNpb249
+IjEuNS4wIiBjb250ZW50TWFuYWdlckVuYWJsZWQ9InRydWUiPgogICAgPHRvb2xXaW5kb3dzPgog
+ICAgICAgIDxzaGFyZWRXaW5kb3dzPjwvc2hhcmVkV2luZG93cz4KICAgIDwvdG9vbFdpbmRvd3M+
+CiAgICA8dG9vbFdpbmRvd0JhcnM+CiAgICAgICAgPHRvb2xXaW5kb3dCYXIgYW5jaG9yPSJUT1Ai
+IGRpdmlkZXJTaXplPSIzIiBhZ2dyZWdhdGVNb2RlPSJmYWxzZSIgbGVuZ3RoPSIyMyIgdmlzaWJs
+ZT0idHJ1ZSIgdG9vbHNWaXNpYmxlPSJ0cnVlIj48L3Rvb2xXaW5kb3dCYXI+CiAgICA8L3Rvb2xX
+aW5kb3dCYXJzPgo8L215ZG9nZ3k+Cgo=]]>
+            </workspace>
+        </toolWindowBar>
+    </toolWindowBars>
+</mydoggy>
+
