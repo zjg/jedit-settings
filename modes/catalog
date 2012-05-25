@@ -8,19 +8,19 @@
 
 
 <!-- We let c++ color the .h files -->
-<MODE NAME="c"			FILE="c.xml"
-				FILE_NAME_GLOB="*.c" />
+<MODE NAME="c"         FILE="c.xml"
+            FILE_NAME_GLOB="*.c" />
 
-<MODE NAME="c++"		FILE="cplusplus.xml"
-				FILE_NAME_GLOB="*.{cc,cpp,h,hh,hpp,cxx,dox}" />
+<MODE NAME="c++"      FILE="cplusplus.xml"
+            FILE_NAME_GLOB="*.{cc,cpp,h,hh,hpp,hxx,cxx,dox}" />
 
-<MODE NAME="python"		FILE="python.xml"
-				FILE_NAME_GLOB="*.{py,pyw,sc,jy}"
-				FIRST_LINE_GLOB="#!*/*python*" />
+<MODE NAME="python"      FILE="python.xml"
+            FILE_NAME_GLOB="*.{py,pyw,sc,jy}"
+            FIRST_LINE_GLOB="#!*/*python*" />
 
-<MODE NAME="shellscript"	FILE="shellscript.xml"
-				FILE_NAME_GLOB="*.{csh,sh,bash,login,profile,bashrc,bash_profile}"
-				FIRST_LINE_GLOB="#!/*sh*" />
+<MODE NAME="shellscript"   FILE="shellscript.xml"
+            FILE_NAME_GLOB="*.{csh,sh,bash,login,profile,bashrc,bash_profile}"
+            FIRST_LINE_GLOB="#!/*sh*" />
 
 <MODE NAME="jam"    FILE="jam.xml"
             FILE_NAME_GLOB="{Jamfile,Jamrules,Jambase,*.jam}" />
@@ -28,4 +28,7 @@
 <MODE NAME="tup"    FILE="tup.xml"
             FILE_NAME_GLOB="{Tupfile,*.tup}" />
 
+<MODE NAME="scala" FILE="scala.xml" FILE_NAME_GLOB="*.scala" />
+
 </MODES>
+
