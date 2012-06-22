@@ -31,20 +31,6 @@ void swapWithTest(View view)
    
    // if the file is already open in another editpane, move focus;
    // otherwise, open the file in the current edit pane
-   panes = view.getEditPanes();
-   if (panes.length > 1)
-   {
-      for (EditPane p : panes)
-      {
-         buf = p.getBuffer();
-         if (buf.getName().equals(otherFile) || buf.getPath().equals(otherFile))
-         {
-            p.focusOnTextArea();
-            return;
-         }
-      }
-   }
-   
    Buffer targetBuffer = jEdit.getBuffer(otherFile);
    if (targetBuffer == null)
    {
@@ -53,6 +39,7 @@ void swapWithTest(View view)
    else
    {
       view.goToBuffer(targetBuffer);
+      jEdit.checkBufferStatus(view, true);
    }
 }
 

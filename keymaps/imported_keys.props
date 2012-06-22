@@ -1,5 +1,5 @@
 #jEdit's keymap imported
-#Wed Jun 06 14:24:59 MDT 2012
+#Fri Jun 22 16:22:28 MDT 2012
 end.shortcut2=A+x
 select-end.shortcut2=AS+x
 prev-line.shortcut2=A+i
@@ -7,7 +7,6 @@ last-macro.shortuct=C+m C+l
 select-line-range.shortcut=C+e C+l
 ctags-interface-search-tag-by-substring.shortcut=C+e C+q
 close-docking-area.shortcut=C+e C+BACK_QUOTE
-C/Toggle_Header_Source.shortcut=C+h
 next-bracket.shortcut=C+e C+CLOSE_BRACKET
 quick-search.shortcut=C+COMMA
 indent-lines.shortcut=C+i
@@ -176,6 +175,7 @@ paste-previous.shortcut=C+e C+v
 help.shortcut=F1
 center-caret.shortcut=C+e C+n
 record-macro.shortcut=C+m C+r
+Toggle_Header_Source_with_refresh.shortcut=C+h
 next-line.shortcut2=A+k
 top-docking-area.shortcut=C+e C+UP
 paste-string-register.shortcut=C+r C+v
