@@ -27,3 +27,7 @@ plugins/projectviewer*
 plugins/marker*
 plugins/ise*
 plugins/gatchan*
+stderr.log
+printspec
+console/
+scalac/
