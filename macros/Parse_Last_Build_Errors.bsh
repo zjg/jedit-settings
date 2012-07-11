@@ -1,0 +1,71 @@
+
+import errorlist.*;
+import java.util.regex.*;
+
+errorlist.DefaultErrorSource e = new DefaultErrorSource("Test");
+errorlist.ErrorSource.registerErrorSource(e);
+
+jEdit.getAction("error-list-clear").invoke(null);
+
+void addError(errorlist.DefaultErrorSource e, String file, int line, boolean isError, String message)
+{
+   errorlist.DefaultErrorSource.DefaultError err = 
+      new errorlist.DefaultErrorSource.DefaultError(e,
+                                                    isError ? errorlist.ErrorSource.ERROR : errorlist.ErrorSource.WARNING,
+                                                    file,
+                                                    line-1,
+                                                    0,
+                                                    0,
+                                                    message);
+      
+   e.addError(err);
+}
+
+File findFile(File root, String fileToFind, int depth)
+{
+   if (depth > 5) return null;
+   
+   for (File child : root.listFiles())
+   {
+      if (child.isDirectory())
+      {
+         File possibleResult = findFile(child, fileToFind, depth + 1);
+         if (possibleResult != null) return possibleResult;
+      }
+      else if (child.getPath().replaceAll(".*/([^/]+)", "$1").equals(fileToFind))
+      {
+         return child;
+      }
+   }
+   
+   return null;
+}
+
+BufferedReader f = new BufferedReader(new FileReader("/home/drosvick/.lastBuildFolder"));
+String workingDirectory = f.readLine();
+f.close();
+
+BufferedReader r = new BufferedReader(new FileReader("/home/drosvick/.lastBuildOutputNormalized"));
+String line;
+while ((line = r.readLine()) != null)
+{
+   String errorLineRegex = "^([-a-zA-Z0-9_/.]+[.](cxx|h))[:]([0-9]+)[:](.*)$";
+   if (line.matches(errorLineRegex))
+   {
+      Matcher matcher = Pattern.compile(errorLineRegex).matcher(line);
+      
+      String file = matcher.replaceAll("$1");
+      String line = matcher.replaceAll("$3");
+      String message = matcher.replaceAll("$4");
+      
+      if (!file.contains("/"))
+      {
+         File canFind = findFile(new File(workingDirectory), file, 0);
+         if (canFind != null) file = canFind.getPath();
+      }
+      
+      addError(e, file, Integer.parseInt(line), message.contains("error:"), message);
+   }
+}
+r.close();
+
