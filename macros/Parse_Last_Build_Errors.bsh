@@ -64,6 +64,8 @@ while ((line = r.readLine()) != null)
          if (canFind != null) file = canFind.getPath();
       }
       
+      file = new File(file).getCanonicalPath();
+      
       addError(e, file, Integer.parseInt(line), message.contains("error:"), message);
    }
 }
